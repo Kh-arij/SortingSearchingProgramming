@@ -1,0 +1,19 @@
+ALGORITHM InsertionSort
+Var
+    i , j , n : integer;
+    tab : array_of integer;
+Begin
+    for i from 0 to tab.length-1 do
+        Read (tab[i]);
+    End_for
+    
+    For i from 1 to tab.length-1 do
+        n := tab[i];
+        j := i-1;
+        while ((tab [j] > n) AND (j > 0)) do
+            tab[j] := tab [j+1];
+            j := j-1;
+        End_while
+        tab[j+1] := n;
+    End_for
+End
